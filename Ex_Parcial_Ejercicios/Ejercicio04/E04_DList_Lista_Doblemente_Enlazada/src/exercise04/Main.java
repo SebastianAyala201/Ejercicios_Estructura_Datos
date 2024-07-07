@@ -1,11 +1,11 @@
-package exercise03;
+package exercise04;
 
 
 public class Main {
     public static void main(String[] args){
         DList listaDobEnlz = new DList();
         
-        System.out.println("1. agregamos algunos valores a nuestra lista");
+        System.out.println("1. Agregamos algunos valores a nuestra lista");
         
         listaDobEnlz.agregarFinal(1);
         listaDobEnlz.agregarFinal(1);
@@ -32,7 +32,7 @@ public class Main {
         listaDobEnlz.recorrerListaInicioFin(); // Salida esperada: 0 1 1 2
         
         System.out.println("");
-        System.out.println("Verificamos si la nueva lista es binaria");
+        System.out.println("5. Verificamos si la nueva lista es binaria");
         listaDobEnlz.imprimirBinario(); // Salida esperada: La lista no es binaria
     }
 }
