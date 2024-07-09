@@ -1,3 +1,5 @@
+# Para grafos no dirigidos
+
 import heapq
 
 def dijkstra_simple(graph, start):

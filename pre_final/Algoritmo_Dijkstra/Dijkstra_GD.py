@@ -1,3 +1,6 @@
+# Para grafos dirigidos
+
+
 import heapq
 
 def dijkstra_directed(graph, start):

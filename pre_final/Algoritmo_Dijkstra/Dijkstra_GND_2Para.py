@@ -1,3 +1,5 @@
+# Para grafos no dirigidos con nodo inicial y final
+
 import heapq
 
 def dijkstra_simple(graph, start, end):
@@ -40,24 +42,24 @@ def dijkstra_simple(graph, start, end):
 
 # Ejemplo de uso
 graph_simple = {
+    '1': {'2': 35, '3': 30},
+    '2': {'1': 35, '2': 12, '4': 18, '6': 39},
+    '3': {'1': 30, '2': 12, '5': 15},
+    '4': {'2': 18, '5': 12, '6': 16},
+    '5': {'3': 15, '4': 12, '6': 30},
+    '6': {'2': 39, '4': 16, '5': 30}
+}
+
+path_simple, distance_simple = dijkstra_simple(graph_simple, '1', '6')
+print(f"Camino más corto: {path_simple}")
+print(f"Distancia: {distance_simple}")
+
+"""
+    // Youtube
     'S': {'B': 4, 'C': 2},
     'B': {'S': 4, 'C': 1, 'D': 5},
     'C': {'S': 2, 'B': 1, 'D': 8, 'E': 10},
     'D': {'B': 5, 'C': 8, 'E': 2},
     'E': {'C': 10, 'D': 2, 'T': 2},
     'T': {'D': 10, 'E': 2}
-}
-
-path_simple, distance_simple = dijkstra_simple(graph_simple, 'S', 'T')
-print(f"Camino más corto: {path_simple}")
-print(f"Distancia: {distance_simple}")
-
-"""
-    //Ejercicio de practica 2024
-    '1': {'2': 35, '3': 30},
-    '2': {'1': 1, '3': 2, '4': 5, '6': 5},
-    '3': {'1': 4, '2': 2, '5': 1},
-    '4': {'2': 5, '5': 1, '6': 5},
-    '5': {'4': 5, '6': 1},
-    '6': {'2': 5, '4': 1, '5': 5}
 """
